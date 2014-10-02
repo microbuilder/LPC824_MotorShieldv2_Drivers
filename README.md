@@ -9,7 +9,7 @@ The drivers are meant to be used with the LPC82x Xpresso v2 board from NXP in th
 
 # Supported Motor Types
 
-At present, **DC motors** (standard toy DC motors, DC vibration motors, etc.) and **Servo motors** are supported via helper functions.  DC motors are controlled by the PCA9685 PWM driver, which is driver via I2C, and servo motors are driven from a PWM signal generated via the SCTimer peripheral on the LPC824.  See the documention in the root folder for further information.
+At present, **DC motors** (standard toy DC motors, DC vibration motors, etc.) and **Servo motors** are supported via helper functions.  DC motors are controlled by the PCA9685 PWM driver, which is driven via I2C, and servo motors are driven from a PWM signal generated via the SCTimer peripheral on the LPC824.  See the documention in the root folder for further information.
 
 The following motors were tested during developent:
 
@@ -18,6 +18,8 @@ The following motors were tested during developent:
 - Continuous Rotation Servo: https://www.adafruit.com/products/1201
 - Standard Servo: https://www.adafruit.com/products/155
 - Mini Pan-Tilt Kit: https://www.adafruit.com/products/1967
+
+NOTE: The I2C driver for the PCA9685 makes use of the ROM-based I2C drivers, and may be useful as a starting point implement your own I2C drivers for other sensors or chips that communicate using the I2C bus.
 
 # SW Requirements
 
